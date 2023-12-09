@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- head definitions go here -->
+</head>
+
+<style>
+    /* CSS */
+    .button-1 {
+        background-color: #EA4C89;
+        border-radius: 8px;
+        border-style: none;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        height: 40px;
+        line-height: 20px;
+        list-style: none;
+        margin: 0;
+        outline: none;
+        padding: 10px 16px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transition: color 100ms;
+        vertical-align: baseline;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .button-1:hover,
+    .button-1:focus {
+        background-color: #F082AC;
+    }
+</style>
+
+<body style="overflow: hidden; /* Hide scrollbars */">
+    <div style="        padding: 50px;
+                 height: 84vh ;background-color: #0093E9;
+                 background-color: #0093E9;
+                 background-image: linear-gradient(249deg, #0093E9 0%, #80D0C7 98%);
+        ">
+        <img style="  display: block;
+
+        margin-left: auto;
+      
+        margin-right: auto;
+      
+        width: 32%;
+      
+      " src="./file-icon.png">
+        <br />
+        <br />
+
+        <!-- HTML !-->
+        <button class="button-1 " style="  margin: 0;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      " onclick="sendMessageFileOpened()" type="button">الرجاء الضغط هنا لتحميل
+            ملف
+            الاعدادات
+        </button>
+
+    </div>
+
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        async function sendMessageFileOpened() {
+            await ipcRenderer.send('send-message', 'vpn-file-loaded');
+        }
+    </script>
+
+</body>
+
+</html>
