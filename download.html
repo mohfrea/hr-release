@@ -7,7 +7,7 @@
     
 
     <!-- Curious what created these downloads? Check out https://hydraulic.dev -->
-    <meta name="generator" content="Conveyor: 14.3"/>
+    <meta name="generator" content="Conveyor: 16.0"/>
 
     
     <link rel=icon href="icon.png" sizes="any" type="image/png">
@@ -50,9 +50,13 @@
             color: var(--foreground);
         }
 
-        html, body {
+        /* Only set dimensions if needed for flex centering */
+        html {
             height: 100%;
-            width: 100%;
+        }
+        body {
+            min-height: 100%;
+            margin: 0;
         }
 
         .download-button > svg > g > path {
@@ -292,7 +296,7 @@
 
             <h1 id="title">health-ly</h1>
 
-            <span id="version">Version <span>1.4.8</span></span>
+            <span id="version">Version <span>1.4.9</span></span>
 
             <div id="pane-win">
                 
@@ -313,8 +317,8 @@
                     
                         <p class="smaller-fonts" style="line-height: 200%" id="windows-download-options">
                             <span id="amd-title">Intel: &nbsp;&nbsp;</span>
-                            <a href="https://github.com/mohfrea/hr-release/releases/latest/download/health-ly-1.4.8-windows-amd64.zip" download>Download .zip</a> &nbsp;&nbsp;
-                            <a href="https://github.com/mohfrea/hr-release/releases/latest/download/health-ly-1.4.8.x64.msix" download>Download .msix</a> &nbsp;&nbsp;
+                            <a href="https://github.com/mohfrea/hr-release/releases/latest/download/health-ly-1.4.9-windows-amd64.zip" download>Download .zip</a> &nbsp;&nbsp;
+                            <a href="https://github.com/mohfrea/hr-release/releases/latest/download/health-ly-1.4.9.x64.msix" download>Download .msix</a> &nbsp;&nbsp;
                             <a href="https://github.com/mohfrea/hr-release/releases/latest/download/health-ly-hzvw0qxfryq1r.appinstaller" download>Download .appinstaller</a>
                         </p>
                     
